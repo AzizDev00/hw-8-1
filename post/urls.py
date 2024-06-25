@@ -18,5 +18,4 @@ urlpatterns = [
 
     path('<uuid:pk>/create-delete-like/', PostLikeApiView.as_view()),
     path('comments/<uuid:pk>/create-delete-like/', CommentLikeAPiView.as_view()),
-
 ]

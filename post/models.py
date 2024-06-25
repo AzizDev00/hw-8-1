@@ -20,6 +20,12 @@ class Post(BaseModel):
 
     def __str__(self):
         return f"{self.author} post about {self.caption}"
+    
+    def save(self, *args, **kwargs):
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"Saving post with id: {self.id}")
+        super().save(*args, **kwargs)
 
 
 class PostComment(BaseModel):
